@@ -7,7 +7,7 @@ services:
       - "3000:3000"
     environment:
       - PORT=3000
-      - MONGODB_URI=mongodb://127.0.0.1:27017/expense-tracker?directConnection=true&serverSelectionTimeoutMS=5000
+      - MONGODB_URI=mongodb://mongodb:27017/expense-tracker?directConnection=true&serverSelectionTimeoutMS=5000
       - JWT_SECRET=secretKey
       - NODE_ENV=development
     depends_on:

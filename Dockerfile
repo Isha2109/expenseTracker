@@ -15,10 +15,6 @@ COPY . .
 ENV NODE_ENV=production \
     PORT=3000
 
-# Health check
-HEALTHCHECK --interval=30s --timeout=3s --start-period=30s \
-  CMD wget --quiet --tries=1 --spider http://localhost:3000/ || exit 1
-
 # Expose port
 EXPOSE 3000
 
